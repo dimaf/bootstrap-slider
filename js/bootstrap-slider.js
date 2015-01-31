@@ -409,14 +409,14 @@
 				this.mousePos = 'pageX';
 				this.sizePos = 'offsetWidth';
 
-				this._addClass(this.tooltip, 'top');
-				this.tooltip.style.top = -this.tooltip.outerHeight - 14 + 'px';
+				this._addClass(this.tooltip, 'bottom');
+				this.tooltip.style.bottom = -this.tooltip.outerHeight - 14 + 'px';
 
-				this._addClass(this.tooltip_min, 'top');
-				this.tooltip_min.style.top = -this.tooltip_min.outerHeight - 14 + 'px';
+				this._addClass(this.tooltip_min, 'bottom');
+				this.tooltip_min.style.bottom = -this.tooltip_min.outerHeight - 14 + 'px';
 
-				this._addClass(this.tooltip_max, 'top');
-				this.tooltip_max.style.top = -this.tooltip_max.outerHeight - 14 + 'px';
+				this._addClass(this.tooltip_max, 'bottom');
+				this.tooltip_max.style.bottom = -this.tooltip_max.outerHeight - 14 + 'px';
 			}
 
 			if (this.options.value instanceof Array) {
@@ -1133,8 +1133,8 @@
 				this.$sliderElem.off();
 			},
 			_setText: function(element, text) {
-				if(typeof element.innerText !== "undefined") {
-			 		element.innerText = text;
+				if(typeof element.innerHTML !== "undefined") {
+			 		element.innerHTML = text;
 			 	} else if(typeof element.textContent !== "undefined") {
 			 		element.textContent = text;
 			 	}
